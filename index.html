@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>집필 청산 관할 포털</title>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  min-height:100vh;
+  background:#100d0c;
+  color:#eee4d2;
+  font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif;
+}
+.wrap{max-width:780px;margin:auto;padding:24px 16px 30px}
+header{text-align:center;padding:5px 0 20px}
+.kicker{font-size:11px;letter-spacing:3px;color:#a99372;margin-bottom:8px}
+h1{
+  margin:0;
+  font-family:"Gungsuh","궁서","Batang",serif;
+  font-size:clamp(29px,6vw,48px);
+  letter-spacing:-5px;
+  color:#f1dfbb;
+}
+.subtitle{margin:10px 0 0;color:#b8aa94;font-size:14px;line-height:1.5}
+.choice{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  align-items:stretch;
+}
+.card{
+  position:relative;
+  padding:20px 18px 19px;
+  min-height:330px;
+  border:1px solid #66533d;
+  background:#191513;
+  text-align:center;
+  box-shadow:0 14px 35px rgba(0,0,0,.35);
+}
+.card.time{border-top:4px solid #4c7884}
+.card.word{border-top:4px solid #a65a38}
+.symbol{font-size:34px;margin-bottom:5px}
+.org{font-size:12px;letter-spacing:2px;color:#b7a17d;margin-bottom:5px}
+.card h2{
+  margin:0;
+  font-family:"Gungsuh","궁서","Batang",serif;
+  font-size:25px;
+  letter-spacing:-2px;
+}
+.desc{font-size:15px;color:#c2b7a5;line-height:1.7;margin:9px 0 13px}
+.rule{
+  display:inline-block;
+  padding:6px 11px;
+  margin-bottom:12px;
+  border:1px solid #55483a;
+  color:#ead7b4;
+  font-weight:700;
+}
+.card ul{
+  list-style:none;
+  padding:0;
+  margin:0 0 14px;
+  color:#a99d8c;
+  line-height:1.55;
+  font-size:12px;
+}
+.card li:before{content:"• ";color:#b39a70}
+.btn{
+  display:inline-block;
+  width:100%;
+  padding:10px 12px;
+  text-decoration:none;
+  font-weight:700;
+  border:1px solid #88704a;
+  color:#f2dfbd;
+  background:#211914;
+}
+.btn:hover{background:#2b211b}
+.divider{
+  text-align:center;
+  margin:16px 0 0;
+  color:#786b5a;
+  font-size:12px;
+  letter-spacing:2px;
+}
+.notice{
+  margin-top:14px;
+  padding:10px 14px;
+  text-align:center;
+  border-top:1px solid #40362e;
+  border-bottom:1px solid #40362e;
+  color:#958a7b;
+  font-size:13px;
+  line-height:1.5;
+}
+footer{text-align:center;margin-top:15px;color:#5f574e;font-size:11px}
+
+@media(max-width:650px){
+  .wrap{padding:28px 14px 40px}
+  .choice{grid-template-columns:1fr}
+  .card{min-height:auto;padding:25px 20px}
+  h1{letter-spacing:-6px}
+}
+
+.sayings{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-top:14px;
+}
+.saying{
+  padding:11px 14px;
+  border:1px solid #40362e;
+  background:#151210;
+}
+.saying-org{
+  color:#b7a17d;
+  font-size:13px;
+  letter-spacing:2px;
+  margin-bottom:5px;
+}
+.saying p{
+  margin:0;
+  text-align:center;
+  color:#d2c3ad;
+  font-family:"Gungsuh","궁서","Batang",serif;
+  font-size:13px;
+  line-height:1.45;
+}
+@media(max-width:650px){
+  .sayings{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">WRITING SETTLEMENT PORTAL</div>
+    <h1>집필 청산 관할 포털</h1>
+    <p class="subtitle">
+      당신은 빚쟁이처럼 다가오는 마감일과 할당량에 대한 계획을<br>
+      무엇을 기준으로 세우십니까? 얼마나 청산해야 해방되시나요?
+    </p>
+  </header>
+
+  <main class="choice">
+    <section class="card word">
+      <div class="symbol">🐯</div>
+      <div class="org">호랑이파</div>
+      <h2>글자수 기준 청산</h2>
+      <p class="desc">작성한 글자수를 기준으로<br>미납 글자수를 계산합니다.</p>
+      <div class="rule">청산 단위 · 1자</div>
+      <ul>
+        <li>원고 글자수 확인</li>
+        <li>목표 글자수 확인</li>
+        <li>부족 글자수 수금</li>
+      </ul>
+      <a class="btn" href="https://neneggunyang.github.io/char-collector/">글자수 수금기 입장 →</a>
+    </section>
+
+    <section class="card time">
+      <div class="symbol">🐉</div>
+      <div class="org">해룡파</div>
+      <h2>시간 기준 청산</h2>
+      <p class="desc">집필한 시간을 기준으로<br>미납 집필시간을 계산합니다.</p>
+      <div class="rule">청산 단위 · 30분</div>
+      <ul>
+        <li>밀린 집필시간 계산</li>
+        <li>미납 시간 확인</li>
+        <li>회수 계획 관리</li>
+      </ul>
+      <a class="btn" href="https://neneggunyang.github.io/writing-time-ledger/">집필시간 회수장부 입장 →</a>
+    </section>
+  </main>
+
+
+  <section class="sayings">
+    <div class="saying">
+      <div class="saying-org">🐯 호랑이파</div>
+      <p><strong>“중요한 건 몇 시간 썼느냐가 아니라<br>몇 자를 썼느냐지 말입니다.”</strong></p>
+    </div>
+    <div class="saying">
+      <div class="saying-org">🌊 해룡파</div>
+      <p><strong>“시간과 정성을 들이면 누구나<br>멋진 글을 쓰게 되는 법이다.”</strong></p>
+    </div>
+  </section>
+
+  <div class="divider">━━━━━━━━━━ 관할권은 다르다 ━━━━━━━━━━</div>
+
+  <div class="notice">
+    🐯 호랑이파는 <strong>글자수</strong>를 본다　|　🌊 해룡파는 <strong>시간</strong>을 본다<br>
+    청산 기준을 잘못 선택할 경우 양측 모두 책임지지 않습니다.
+  </div>
+
+  <footer>본 페이지는 집필자의 생산성을 착취하기 위한 가상의 포털입니다.</footer>
+</div>
+</body>
+</html>
